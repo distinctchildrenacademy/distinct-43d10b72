@@ -52,6 +52,21 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				academy: {
+					purple: {
+						DEFAULT: '#8B5CF6',
+						dark: '#7E69AB',
+						light: '#D6BCFA'
+					},
+					pastel: {
+						green: '#F2FCE2',
+						yellow: '#FEF7CD',
+						orange: '#FEC6A1',
+						purple: '#E5DEFF',
+						pink: '#FFDEE2',
+						blue: '#D3E4FD'
+					}
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
