@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -65,6 +66,16 @@ export default {
 						purple: '#E5DEFF',
 						pink: '#FFDEE2',
 						blue: '#D3E4FD'
+					},
+					blue: {
+						DEFAULT: '#1E40AF', // blue-800
+						light: '#3B82F6', // blue-500
+						dark: '#1E3A8A', // blue-900
+					},
+					orange: {
+						DEFAULT: '#F97316', // orange-500 (blood orange)
+						light: '#FFEDD5', // orange-100
+						dark: '#C2410C', // orange-700
 					}
 				},
 				sidebar: {
