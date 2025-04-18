@@ -10,17 +10,17 @@ const ContactSection = () => {
     {
       icon: <MapPin className="h-5 w-5 text-academy-purple" />,
       title: "Our Location",
-      details: "123 Education Lane, Learning City, LC 12345",
+      details: "Distinct Children Academy, Anua Obio Market Square, Opposite Godswill Akpabio International Stadium, Uyo, Akwa Ibom State, Nigeria",
     },
     {
       icon: <Phone className="h-5 w-5 text-academy-purple" />,
-      title: "Phone Number",
-      details: "(555) 123-4567",
+      title: "Phone Numbers",
+      details: "+234 812 730 9741, +234 701 471 5448",
     },
     {
       icon: <Mail className="h-5 w-5 text-academy-purple" />,
       title: "Email Address",
-      details: "info@distinctacademy.edu",
+      details: "distinctchildrenacademy@gmail.com",
     },
     {
       icon: <Clock className="h-5 w-5 text-academy-purple" />,
