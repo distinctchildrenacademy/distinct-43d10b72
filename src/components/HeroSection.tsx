@@ -1,28 +1,34 @@
 
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <div className="relative isolate px-6 pt-14 lg:px-8">
-      <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            Transform Your Future with Quality Education
+    <section className="relative">
+      {/* Hero Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-orange-50 opacity-70 z-0"></div>
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 lg:py-32 relative z-10">
+        <div className="text-center space-y-6 max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-800 font-display">
+            Welcome to <span className="text-blue-600">Distinct Children</span> <span className="text-orange-500">Academy</span>
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Join our academy and take the first step towards a brighter future. Our programs are designed to help you succeed.
+          <p className="text-lg md:text-xl text-gray-600">
+            A beacon of academic excellence in Anua Obio, Uyo
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button>
+          <div className="flex flex-wrap justify-center gap-4 pt-2">
+            <Button className="bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white">
               Enroll Now
             </Button>
-            <Button variant="outline">
-              Contact Us
-            </Button>
+            <Link to="/contact">
+              <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+                Contact Us
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
