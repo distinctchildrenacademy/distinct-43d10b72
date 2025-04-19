@@ -1,75 +1,150 @@
+
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
-import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [submenuOpen, setSubmenuOpen] = useState({
+    about: false,
+    academic: false,
+    admissions: false,
+    student: false
+  });
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const academicProgramsLinks = [
-    {
-      title: "Early Childhood Education",
-      description: "Nurturing young minds ages 2-4",
-      href: "#early-childhood"
-    },
-    {
-      title: "Primary Education",
-      description: "Comprehensive learning for ages 5-10",
-      href: "#primary"
-    },
-    {
-      title: "After-School Programs",
-      description: "Extended learning opportunities",
-      href: "#after-school"
-    },
-    {
-      title: "Summer Programs",
-      description: "Engaging summer activities",
-      href: "#summer"
-    },
-    {
-      title: "Gallery",
-      description: "View our school activities and facilities",
-      href: "/gallery"
-    },
-    {
-      title: "News & Events",
-      description: "Stay updated with school activities",
-      href: "#news-events"
-    }
-  ];
+  const toggleSubmenu = (menu: 'about' | 'academic' | 'admissions' | 'student') => {
+    setSubmenuOpen({
+      ...submenuOpen,
+      [menu]: !submenuOpen[menu]
+    });
+  };
 
-  const aboutLinks = [
+  // Navigation menu data
+  const aboutUsLinks = [
+    {
+      title: "Overview",
+      description: "Learn about our institution and its values",
+      href: "#about-overview",
+    },
     {
       title: "School History",
-      href: "/about/history",
-      description: "Our journey since establishment"
+      description: "Discover our journey since founding in 2023",
+      href: "#school-history",
     },
     {
       title: "Proprietor's Profile",
-      href: "#proprietor",
-      description: "Meet our founder and leader"
+      description: "Meet Prof. Isidore Ekpe, our founder",
+      href: "#proprietor-profile",
     },
     {
       title: "Leadership Team",
-      href: "#leadership",
-      description: "Our administrative team"
+      description: "Our dedicated administrative and teaching staff",
+      href: "#leadership-team",
     },
     {
       title: "Vision & Mission",
+      description: "Our guiding principles and aspirations",
       href: "#vision-mission",
-      description: "Our guiding principles"
+    },
+    {
+      title: "School Anthem & Pledge",
+      description: "Symbols of our unity and commitment",
+      href: "#anthem-pledge",
     },
     {
       title: "Safety & Child Protection",
+      description: "Our measures to ensure student wellbeing",
       href: "#safety",
-      description: "Our commitment to student safety"
-    }
+    },
+  ];
+
+  const academicProgramsLinks = [
+    {
+      title: "Overview",
+      description: "Our comprehensive educational programs",
+      href: "#programs-overview",
+    },
+    {
+      title: "Instructional Aids",
+      description: "Tools and resources for effective learning",
+      href: "#instructional-aids",
+    },
+    {
+      title: "Library",
+      description: "Our resource center for learning and research",
+      href: "#library",
+    },
+    {
+      title: "Laboratory",
+      description: "Facilities for hands-on scientific exploration",
+      href: "#laboratory",
+    },
+    {
+      title: "Power Supply Infrastructure",
+      description: "Ensuring uninterrupted learning",
+      href: "#power-supply",
+    },
+  ];
+
+  const admissionsLinks = [
+    {
+      title: "Admission Requirements",
+      description: "What you need to join our community",
+      href: "#admission-requirements",
+    },
+    {
+      title: "How to Apply",
+      description: "Step-by-step guide to our application process",
+      href: "#how-to-apply",
+    },
+    {
+      title: "Entrance Examinations",
+      description: "Assessment for prospective students",
+      href: "#entrance-exams",
+    },
+    {
+      title: "Fee Structure",
+      description: "Tuition and other costs",
+      href: "#fees",
+    },
+    {
+      title: "Payment Methods",
+      description: "Available options for financial transactions",
+      href: "#payment-methods",
+    },
+  ];
+
+  const studentLifeLinks = [
+    {
+      title: "School Uniform",
+      description: "Our dress code and uniform requirements",
+      href: "#uniform",
+    },
+    {
+      title: "School Rules & Regulations",
+      description: "Guidelines for conduct and behavior",
+      href: "#rules",
+    },
+    {
+      title: "Student Activities",
+      description: "Extracurricular programs and clubs",
+      href: "#activities",
+    },
+    {
+      title: "Excursions",
+      description: "Educational trips and field experiences",
+      href: "#excursions",
+    },
+    {
+      title: "Gallery",
+      description: "Photos of our school and events",
+      href: "#gallery",
+    },
   ];
 
   return (
@@ -78,13 +153,13 @@ const Header = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center">
+            <a href="#" className="flex items-center">
               <img
-                src="/lovable-uploads/e04b1eec-5a91-4e04-834c-1ee6726a9f53.png"
+                src="/lovable-uploads/f08a3488-6e8a-4994-86c5-ff897d2d2c60.png"
                 alt="Distinct Children Academy"
-                className="h-16 w-auto"
+                className="h-16 w-auto mr-3"
               />
-            </Link>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -92,9 +167,12 @@ const Header = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <Link to="/" className="text-gray-700 hover:text-blue-600 font-medium py-2 px-3 transition-colors">
+                  <NavigationMenuLink
+                    href="#home"
+                    className="text-gray-700 hover:text-blue-600 font-medium py-2 px-3 transition-colors"
+                  >
                     Home
-                  </Link>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
@@ -103,18 +181,18 @@ const Header = () => {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                      {aboutLinks.map((item) => (
-                        <li key={item.title}>
+                      {aboutUsLinks.map((item) => (
+                        <li key={item.title} className="row-span-1">
                           <NavigationMenuLink asChild>
-                            <Link
-                              to={item.href}
+                            <a
+                              href={item.href}
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-blue-50 hover:text-blue-600"
                             >
                               <div className="text-sm font-medium leading-none">{item.title}</div>
                               <p className="line-clamp-2 text-sm leading-snug text-gray-500">
                                 {item.description}
                               </p>
-                            </Link>
+                            </a>
                           </NavigationMenuLink>
                         </li>
                       ))}
@@ -129,17 +207,17 @@ const Header = () => {
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                       {academicProgramsLinks.map((item) => (
-                        <li key={item.title}>
+                        <li key={item.title} className="row-span-1">
                           <NavigationMenuLink asChild>
-                            <Link
-                              to={item.href}
+                            <a
+                              href={item.href}
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-blue-50 hover:text-blue-600"
                             >
                               <div className="text-sm font-medium leading-none">{item.title}</div>
                               <p className="line-clamp-2 text-sm leading-snug text-gray-500">
                                 {item.description}
                               </p>
-                            </Link>
+                            </a>
                           </NavigationMenuLink>
                         </li>
                       ))}
@@ -148,9 +226,71 @@ const Header = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link to="/contact" className="text-gray-700 hover:text-blue-600 font-medium py-2 px-3 transition-colors">
+                  <NavigationMenuTrigger className="text-gray-700 hover:text-blue-600 font-medium">
+                    Admissions
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                      {admissionsLinks.map((item) => (
+                        <li key={item.title} className="row-span-1">
+                          <NavigationMenuLink asChild>
+                            <a
+                              href={item.href}
+                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-blue-50 hover:text-blue-600"
+                            >
+                              <div className="text-sm font-medium leading-none">{item.title}</div>
+                              <p className="line-clamp-2 text-sm leading-snug text-gray-500">
+                                {item.description}
+                              </p>
+                            </a>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-gray-700 hover:text-blue-600 font-medium">
+                    Student Life
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                      {studentLifeLinks.map((item) => (
+                        <li key={item.title} className="row-span-1">
+                          <NavigationMenuLink asChild>
+                            <a
+                              href={item.href}
+                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-blue-50 hover:text-blue-600"
+                            >
+                              <div className="text-sm font-medium leading-none">{item.title}</div>
+                              <p className="line-clamp-2 text-sm leading-snug text-gray-500">
+                                {item.description}
+                              </p>
+                            </a>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    href="#news-events"
+                    className="text-gray-700 hover:text-blue-600 font-medium py-2 px-3 transition-colors"
+                  >
+                    News & Events
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    href="#contact"
+                    className="text-gray-700 hover:text-blue-600 font-medium py-2 px-3 transition-colors"
+                  >
                     Contact Us
-                  </Link>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
@@ -158,7 +298,7 @@ const Header = () => {
 
           {/* Enrollment Button */}
           <div className="hidden lg:block">
-            <Button className="bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white">
+            <Button className="bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white font-medium">
               Enroll Now
             </Button>
           </div>
@@ -179,22 +319,77 @@ const Header = () => {
       {isMenuOpen && (
         <div className="lg:hidden bg-white w-full absolute z-20 shadow-lg">
           <div className="container mx-auto px-4 py-4 space-y-0">
-            <Link to="/" className="block text-gray-700 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Home</Link>
+            <a href="#home" className="block text-gray-700 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Home</a>
 
             <div className="py-2 border-b border-gray-100">
-              <Link to="/about" className="block text-gray-700 hover:text-blue-600 font-medium py-2">About Us</Link>
+              <div className="flex justify-between items-center cursor-pointer text-gray-700 hover:text-blue-600 font-medium" onClick={() => toggleSubmenu('about')}>
+                <span>About Us</span>
+                <ChevronDown size={16} className={`transition-transform ${submenuOpen.about ? 'rotate-180' : ''}`} />
+              </div>
+              {submenuOpen.about && (
+                <div className="pl-4 mt-2 space-y-2">
+                  {aboutUsLinks.map(item => (
+                    <a key={item.title} href={item.href} className="block text-gray-600 hover:text-blue-600 py-1 text-sm">
+                      {item.title}
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div className="py-2 border-b border-gray-100">
-              <Link to="/programs" className="block text-gray-700 hover:text-blue-600 font-medium py-2">Academic Programs</Link>
+              <div className="flex justify-between items-center cursor-pointer text-gray-700 hover:text-blue-600 font-medium" onClick={() => toggleSubmenu('academic')}>
+                <span>Academic Programs</span>
+                <ChevronDown size={16} className={`transition-transform ${submenuOpen.academic ? 'rotate-180' : ''}`} />
+              </div>
+              {submenuOpen.academic && (
+                <div className="pl-4 mt-2 space-y-2">
+                  {academicProgramsLinks.map(item => (
+                    <a key={item.title} href={item.href} className="block text-gray-600 hover:text-blue-600 py-1 text-sm">
+                      {item.title}
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div className="py-2 border-b border-gray-100">
-              <Link to="/contact" className="block text-gray-700 hover:text-blue-600 font-medium py-2">Contact Us</Link>
+              <div className="flex justify-between items-center cursor-pointer text-gray-700 hover:text-blue-600 font-medium" onClick={() => toggleSubmenu('admissions')}>
+                <span>Admissions</span>
+                <ChevronDown size={16} className={`transition-transform ${submenuOpen.admissions ? 'rotate-180' : ''}`} />
+              </div>
+              {submenuOpen.admissions && (
+                <div className="pl-4 mt-2 space-y-2">
+                  {admissionsLinks.map(item => (
+                    <a key={item.title} href={item.href} className="block text-gray-600 hover:text-blue-600 py-1 text-sm">
+                      {item.title}
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
+
+            <div className="py-2 border-b border-gray-100">
+              <div className="flex justify-between items-center cursor-pointer text-gray-700 hover:text-blue-600 font-medium" onClick={() => toggleSubmenu('student')}>
+                <span>Student Life</span>
+                <ChevronDown size={16} className={`transition-transform ${submenuOpen.student ? 'rotate-180' : ''}`} />
+              </div>
+              {submenuOpen.student && (
+                <div className="pl-4 mt-2 space-y-2">
+                  {studentLifeLinks.map(item => (
+                    <a key={item.title} href={item.href} className="block text-gray-600 hover:text-blue-600 py-1 text-sm">
+                      {item.title}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <a href="#news-events" className="block text-gray-700 hover:text-blue-600 font-medium py-2 border-b border-gray-100">News & Events</a>
+            <a href="#contact" className="block text-gray-700 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Contact Us</a>
 
             <div className="pt-2">
-              <Button className="w-full bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white">
+              <Button className="w-full bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white font-medium">
                 Enroll Now
               </Button>
             </div>
