@@ -1,5 +1,6 @@
 
 import { Facebook, Twitter, Instagram, Youtube, Linkedin, MapPin, Phone, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,9 +13,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center mb-4">
               <img 
-                src="/lovable-uploads/61a4741c-66f5-47e6-bb57-4820308482ef.png" 
+                src="/lovable-uploads/35126a2c-91cd-4198-bc1a-43667b626257.png" 
                 alt="Distinct Children Academy" 
-                className="h-16 w-auto bg-white p-1 rounded-md"
+                className="h-16 w-auto bg-transparent"
               />
             </div>
             <p className="text-gray-300 mb-4">
@@ -62,12 +63,12 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 font-display">Quick Links</h3>
             <ul className="grid grid-cols-2 gap-2">
-              <li><a href="#home" className="text-gray-300 hover:text-orange-400 transition-colors">Home</a></li>
-              <li><a href="#about" className="text-gray-300 hover:text-orange-400 transition-colors">About Us</a></li>
-              <li><a href="#programs" className="text-gray-300 hover:text-orange-400 transition-colors">Programs</a></li>
-              <li><a href="/contact" className="text-gray-300 hover:text-orange-400 transition-colors">Contact Us</a></li>
-              <li><a href="#admission-requirements" className="text-gray-300 hover:text-orange-400 transition-colors">Admissions</a></li>
-              <li><a href="#student-life" className="text-gray-300 hover:text-orange-400 transition-colors">Student Life</a></li>
+              <li><Link to="/" className="text-gray-300 hover:text-orange-400 transition-colors">Home</Link></li>
+              <li><Link to="/about" className="text-gray-300 hover:text-orange-400 transition-colors">About Us</Link></li>
+              <li><Link to="/programs" className="text-gray-300 hover:text-orange-400 transition-colors">Programs</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-orange-400 transition-colors">Contact Us</Link></li>
+              <li><Link to="/gallery" className="text-gray-300 hover:text-orange-400 transition-colors">Gallery</Link></li>
+              <li><a href="https://forms.gle/AhRbUbs3Ai9aosHbA" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-orange-400 transition-colors">Careers</a></li>
             </ul>
           </div>
         </div>
