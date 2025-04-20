@@ -39,12 +39,12 @@ const Header = () => {
     {
       title: "Proprietor's Profile",
       description: "Meet Prof. Isidore Ekpe, our founder",
-      href: "#proprietor-profile",
+      href: "/proprietor-profile",
     },
     {
       title: "Leadership Team",
       description: "Our dedicated administrative and teaching staff",
-      href: "#leadership-team",
+      href: "/leadership-team",
     },
     {
       title: "Vision & Mission",

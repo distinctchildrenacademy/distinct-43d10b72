@@ -11,6 +11,7 @@ import Overview from "./pages/Overview";
 import Programs from "./pages/Programs";
 import VisionAndMission from "./pages/VisionAndMission";
 import SchoolHistory from "./pages/SchoolHistory";
+import ProprietorProfile from "./pages/ProprietorProfile";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/programs" element={<Programs />} />
           <Route path="/vision-and-mission" element={<VisionAndMission />} />
           <Route path="/school-history" element={<SchoolHistory />} />
+          <Route path="/proprietor-profile" element={<ProprietorProfile />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
