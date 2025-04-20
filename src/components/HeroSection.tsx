@@ -17,25 +17,17 @@ const HeroSection = () => {
             A beacon of academic excellence in Anua Obio, Uyo, Nigeria.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
-            <Link to="/contact">
-              <Button className="bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white">
-                Contact Us
-              </Button>
-            </Link>
             <Link to="/programs">
-              <Button className="bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white">
+              <Button className="bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white">
                 Enroll Now
               </Button>
             </Link>
+            <Link to="/contact">
+              <Button variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50">
+                Contact Us
+              </Button>
+            </Link>
           </div>
-        </div>
-
-        {/* About Our Academy Section */}
-        <div className="mt-16 bg-white/80 backdrop-blur-sm rounded-lg p-8 shadow-lg">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-4">About Our Academy</h2>
-          <p className="text-gray-700 text-center text-lg">
-            We provide a nurturing environment where children discover their potential through innovative learning and creative exploration.
-          </p>
         </div>
 
         {/* Academic Programs Section */}

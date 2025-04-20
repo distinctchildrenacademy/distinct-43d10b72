@@ -155,9 +155,9 @@ const Header = () => {
           <div className="flex items-center">
             <a href="#" className="flex items-center">
               <img
-                src="/lovable-uploads/f08a3488-6e8a-4994-86c5-ff897d2d2c60.png"
+                src="/lovable-uploads/32dbe30c-5fea-4791-ad85-7d5eb50ae1c2.png"
                 alt="Distinct Children Academy"
-                className="h-16 w-auto mr-3"
+                className="h-16 w-auto"
               />
             </a>
           </div>
