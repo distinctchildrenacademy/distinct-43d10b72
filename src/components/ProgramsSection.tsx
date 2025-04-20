@@ -1,7 +1,5 @@
-
 import { BookOpen, Clock, CalendarDays, Lightbulb } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
 const ProgramsSection = () => {
   const programs = [
@@ -73,7 +71,7 @@ const ProgramsSection = () => {
                 <CardDescription className="text-gray-600">{program.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-2">
                   {program.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
                       <div className="flex-shrink-0 mr-2 mt-1">
@@ -83,18 +81,9 @@ const ProgramsSection = () => {
                     </li>
                   ))}
                 </ul>
-                <Button variant="outline" className="w-full text-academy-purple border-academy-purple hover:bg-academy-pastel-purple">
-                  Learn More
-                </Button>
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <Button className="bg-academy-purple hover:bg-academy-purple-dark text-white">
-            View Full Curriculum
-          </Button>
         </div>
       </div>
     </section>

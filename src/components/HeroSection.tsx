@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -27,44 +26,6 @@ const HeroSection = () => {
                 Contact Us
               </Button>
             </Link>
-          </div>
-        </div>
-
-        {/* Academic Programs Section */}
-        <div className="mt-16">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Academic Programs</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="bg-blue-100/80 backdrop-blur-sm rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="space-y-2">
-                <h3 className="text-xl font-bold text-gray-800">Creche</h3>
-                <p className="text-sm text-gray-600">Ages 1-2 years</p>
-                <p className="text-gray-600">A nurturing environment for our youngest learners</p>
-              </div>
-            </div>
-            
-            <div className="bg-green-100/80 backdrop-blur-sm rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="space-y-2">
-                <h3 className="text-xl font-bold text-gray-800">Nursery</h3>
-                <p className="text-sm text-gray-600">Ages 3-5 years</p>
-                <p className="text-gray-600">Building foundational skills through play and exploration</p>
-              </div>
-            </div>
-            
-            <div className="bg-yellow-100/80 backdrop-blur-sm rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="space-y-2">
-                <h3 className="text-xl font-bold text-gray-800">Primary School</h3>
-                <p className="text-sm text-gray-600">Ages 6-11 years</p>
-                <p className="text-gray-600">Developing core academic and social skills</p>
-              </div>
-            </div>
-            
-            <div className="bg-orange-100/80 backdrop-blur-sm rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="space-y-2">
-                <h3 className="text-xl font-bold text-gray-800">Secondary School</h3>
-                <p className="text-sm text-gray-600">Ages 12-15 years</p>
-                <p className="text-gray-600">Preparing students for academic and life success</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
