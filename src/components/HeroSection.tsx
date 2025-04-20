@@ -23,7 +23,7 @@ const HeroSection = () => {
               </Button>
             </Link>
             <Link to="/contact">
-              <Button variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50">
+              <Button variant="outline" className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-50">
                 Contact Us
               </Button>
             </Link>
@@ -73,4 +73,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
