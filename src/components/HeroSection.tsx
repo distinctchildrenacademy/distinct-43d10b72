@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -13,7 +14,7 @@ const HeroSection = () => {
             Welcome to <span className="text-blue-600">Distinct Children</span> <span className="text-orange-500">Academy</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-600">
-            A beacon of academic excellence in Anua Obio, Uyo
+            A beacon of academic excellence in Anua Obio, Uyo, Nigeria.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <Link to="/contact">
