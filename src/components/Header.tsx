@@ -34,7 +34,7 @@ const Header = () => {
     {
       title: "School History",
       description: "Discover our journey since founding in 2023",
-      href: "#school-history",
+      href: "/school-history",
     },
     {
       title: "Proprietor's Profile",
@@ -49,7 +49,7 @@ const Header = () => {
     {
       title: "Vision & Mission",
       description: "Our guiding principles and aspirations",
-      href: "#vision-mission",
+      href: "/vision-and-mission",
     },
     {
       title: "School Anthem & Pledge",

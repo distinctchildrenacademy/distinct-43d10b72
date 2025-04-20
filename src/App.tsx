@@ -9,6 +9,8 @@ import NotFound from "./pages/NotFound";
 import Gallery from "./pages/Gallery";
 import Overview from "./pages/Overview";
 import Programs from "./pages/Programs";
+import VisionAndMission from "./pages/VisionAndMission";
+import SchoolHistory from "./pages/SchoolHistory";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +26,8 @@ const App = () => (
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/overview" element={<Overview />} />
           <Route path="/programs" element={<Programs />} />
+          <Route path="/vision-and-mission" element={<VisionAndMission />} />
+          <Route path="/school-history" element={<SchoolHistory />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
