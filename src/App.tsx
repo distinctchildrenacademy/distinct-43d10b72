@@ -12,6 +12,16 @@ import Programs from "./pages/Programs";
 import VisionAndMission from "./pages/VisionAndMission";
 import SchoolHistory from "./pages/SchoolHistory";
 import ProprietorProfile from "./pages/ProprietorProfile";
+import LeadershipTeam from "./pages/LeadershipTeam";
+import SchoolAnthemPledge from "./pages/SchoolAnthemPledge";
+import SafetyChildProtection from "./pages/SafetyChildProtection";
+import AdmissionRequirements from "./pages/AdmissionRequirements";
+import ExaminationRules from "./pages/ExaminationRules";
+import SchoolRules from "./pages/SchoolRules";
+import InstructionalAids from "./pages/InstructionalAids";
+import Library from "./pages/Library";
+import Laboratory from "./pages/Laboratory";
+import PowerSupply from "./pages/PowerSupply";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +40,16 @@ const App = () => (
           <Route path="/vision-and-mission" element={<VisionAndMission />} />
           <Route path="/school-history" element={<SchoolHistory />} />
           <Route path="/proprietor-profile" element={<ProprietorProfile />} />
+          <Route path="/leadership-team" element={<LeadershipTeam />} />
+          <Route path="/school-anthem-pledge" element={<SchoolAnthemPledge />} />
+          <Route path="/safety-child-protection" element={<SafetyChildProtection />} />
+          <Route path="/admission-requirements" element={<AdmissionRequirements />} />
+          <Route path="/examination-rules" element={<ExaminationRules />} />
+          <Route path="/school-rules" element={<SchoolRules />} />
+          <Route path="/instructional-aids" element={<InstructionalAids />} />
+          <Route path="/library" element={<Library />} />
+          <Route path="/laboratory" element={<Laboratory />} />
+          <Route path="/power-supply" element={<PowerSupply />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

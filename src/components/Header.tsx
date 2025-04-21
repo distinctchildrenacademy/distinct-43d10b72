@@ -54,97 +54,59 @@ const Header = () => {
     {
       title: "School Anthem & Pledge",
       description: "Symbols of our unity and commitment",
-      href: "#anthem-pledge",
+      href: "/school-anthem-pledge",
     },
     {
       title: "Safety & Child Protection",
       description: "Our measures to ensure student wellbeing",
-      href: "#safety",
+      href: "/safety-child-protection",
     },
   ];
 
   const academicProgramsLinks = [
     {
-      title: "Overview",
-      description: "Our comprehensive educational programs",
-      href: "#programs-overview",
+      title: "School Rules & Regulations",
+      description: "Guidelines for student conduct and behavior",
+      href: "/school-rules",
     },
     {
       title: "Instructional Aids",
       description: "Tools and resources for effective learning",
-      href: "#instructional-aids",
+      href: "/instructional-aids",
     },
     {
       title: "Library",
       description: "Our resource center for learning and research",
-      href: "#library",
+      href: "/library",
     },
     {
       title: "Laboratory",
       description: "Facilities for hands-on scientific exploration",
-      href: "#laboratory",
+      href: "/laboratory",
     },
     {
       title: "Power Supply Infrastructure",
       description: "Ensuring uninterrupted learning",
-      href: "#power-supply",
+      href: "/power-supply",
+    },
+    {
+      title: "Gallery",
+      description: "View our collection of student photos and activities",
+      href: "/gallery",
     },
   ];
 
   const admissionsLinks = [
     {
       title: "Admission Requirements",
-      description: "What you need to join our community",
-      href: "#admission-requirements",
+      description: "Learn more about our Admission requirements and How to Apply",
+      href: "/admission-requirements",
     },
     {
-      title: "How to Apply",
-      description: "Step-by-step guide to our application process",
-      href: "#how-to-apply",
-    },
-    {
-      title: "Entrance Examinations",
-      description: "Assessment for prospective students",
-      href: "#entrance-exams",
-    },
-    {
-      title: "Fee Structure",
-      description: "Tuition and other costs",
-      href: "#fees",
-    },
-    {
-      title: "Payment Methods",
-      description: "Available options for financial transactions",
-      href: "#payment-methods",
-    },
-  ];
-
-  const studentLifeLinks = [
-    {
-      title: "School Uniform",
-      description: "Our dress code and uniform requirements",
-      href: "#uniform",
-    },
-    {
-      title: "School Rules & Regulations",
-      description: "Guidelines for conduct and behavior",
-      href: "#rules",
-    },
-    {
-      title: "Student Activities",
-      description: "Extracurricular programs and clubs",
-      href: "#activities",
-    },
-    {
-      title: "Excursions",
-      description: "Educational trips and field experiences",
-      href: "#excursions",
-    },
-    {
-      title: "Gallery",
-      description: "Photos of our school and events",
-      href: "#gallery",
-    },
+      title: "Examination Rules",
+      description: "Guidelines and regulations for examinations",
+      href: "/examination-rules",
+    }
   ];
 
   return (
@@ -168,7 +130,7 @@ const Header = () => {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuLink
-                    href="#home"
+                    href="/"
                     className="text-gray-700 hover:text-blue-600 font-medium py-2 px-3 transition-colors"
                   >
                     Home
@@ -251,40 +213,6 @@ const Header = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-gray-700 hover:text-blue-600 font-medium">
-                    Student Life
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                      {studentLifeLinks.map((item) => (
-                        <li key={item.title} className="row-span-1">
-                          <NavigationMenuLink asChild>
-                            <a
-                              href={item.href}
-                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-blue-50 hover:text-blue-600"
-                            >
-                              <div className="text-sm font-medium leading-none">{item.title}</div>
-                              <p className="line-clamp-2 text-sm leading-snug text-gray-500">
-                                {item.description}
-                              </p>
-                            </a>
-                          </NavigationMenuLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavigationMenuLink
-                    href="#news-events"
-                    className="text-gray-700 hover:text-blue-600 font-medium py-2 px-3 transition-colors"
-                  >
-                    News & Events
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
                   <NavigationMenuLink
                     href="#contact"
                     className="text-gray-700 hover:text-blue-600 font-medium py-2 px-3 transition-colors"
@@ -319,7 +247,7 @@ const Header = () => {
       {isMenuOpen && (
         <div className="lg:hidden bg-white w-full absolute z-20 shadow-lg">
           <div className="container mx-auto px-4 py-4 space-y-0">
-            <a href="#home" className="block text-gray-700 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Home</a>
+            <a href="/" className="block text-gray-700 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Home</a>
 
             <div className="py-2 border-b border-gray-100">
               <div className="flex justify-between items-center cursor-pointer text-gray-700 hover:text-blue-600 font-medium" onClick={() => toggleSubmenu('about')}>
@@ -369,23 +297,6 @@ const Header = () => {
               )}
             </div>
 
-            <div className="py-2 border-b border-gray-100">
-              <div className="flex justify-between items-center cursor-pointer text-gray-700 hover:text-blue-600 font-medium" onClick={() => toggleSubmenu('student')}>
-                <span>Student Life</span>
-                <ChevronDown size={16} className={`transition-transform ${submenuOpen.student ? 'rotate-180' : ''}`} />
-              </div>
-              {submenuOpen.student && (
-                <div className="pl-4 mt-2 space-y-2">
-                  {studentLifeLinks.map(item => (
-                    <a key={item.title} href={item.href} className="block text-gray-600 hover:text-blue-600 py-1 text-sm">
-                      {item.title}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <a href="#news-events" className="block text-gray-700 hover:text-blue-600 font-medium py-2 border-b border-gray-100">News & Events</a>
             <a href="#contact" className="block text-gray-700 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Contact Us</a>
 
             <div className="pt-2">

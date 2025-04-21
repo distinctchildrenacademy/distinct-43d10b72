@@ -1,4 +1,3 @@
-
 import { Facebook, Twitter, Instagram, Youtube, Linkedin, MapPin, Phone, Mail } from "lucide-react";
 
 const Footer = () => {
@@ -67,7 +66,6 @@ const Footer = () => {
               <li><a href="#programs" className="text-gray-300 hover:text-orange-400 transition-colors">Programs</a></li>
               <li><a href="/contact" className="text-gray-300 hover:text-orange-400 transition-colors">Contact Us</a></li>
               <li><a href="#admission-requirements" className="text-gray-300 hover:text-orange-400 transition-colors">Admissions</a></li>
-              <li><a href="#student-life" className="text-gray-300 hover:text-orange-400 transition-colors">Student Life</a></li>
             </ul>
           </div>
         </div>
