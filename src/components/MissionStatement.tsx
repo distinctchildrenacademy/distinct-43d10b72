@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const MissionStatement = () => {
@@ -10,7 +11,7 @@ const MissionStatement = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Distinct Children Academy has been committed to providing an exceptional educational experience that nurtures the intellectual, social, emotional, and physical development of each child.
+            We are committed to providing an exceptional educational experience that nurtures each child's intellectual, social, emotional, and physical development.
           </p>
         </div>
       </div>
