@@ -21,7 +21,7 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex space-x-4 mt-4">
-              <a href="#" className="text-gray-300 hover:text-orange-400 transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/distinctchildrenacademy/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-orange-400 transition-colors" aria-label="Facebook">
                 <Facebook size={20} />
               </a>
               <a href="https://www.instagram.com/distinctchildrenacademy/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-orange-400 transition-colors" aria-label="Instagram">
