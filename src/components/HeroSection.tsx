@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -16,7 +17,7 @@ const HeroSection = () => {
             A beacon of academic excellence in Anua Obio, Uyo, Nigeria.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
-            <Link to="/programs">
+            <Link to="/enroll">
               <Button className="bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white">
                 Enroll Now
               </Button>
@@ -34,3 +35,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
