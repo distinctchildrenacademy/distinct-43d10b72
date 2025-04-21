@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <div className="flex flex-col items-start mb-6">
               <img 
-                src="/lovable-uploads/61a4741c-66f5-47e6-bb57-4820308482ef.png" 
+                src="/lovable-uploads/82b0c65c-4182-4a7c-bf91-940b4830956d.png" 
                 alt="Distinct Children Academy" 
                 className="h-20 w-auto mb-4"
               />
