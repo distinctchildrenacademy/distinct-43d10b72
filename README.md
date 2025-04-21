@@ -1,4 +1,32 @@
-# Welcome to your Lovable project
+# Distinct Children Academy
+
+![Deploy to Firebase](https://github.com/distinctchildrenacademy/distinctchildrenacademy/actions/workflows/firebase-deploy.yml/badge.svg)
+
+## Project Overview
+This is the official website for Distinct Children Academy, built with:
+- Vite
+- React
+- TypeScript
+- Tailwind CSS
+- Firebase
+
+## Deployment Status
+The application is automatically deployed to Firebase when changes are pushed to the main branch.
+
+## Development
+To run the development server:
+```bash
+npm run dev
+```
+
+## Building for Production
+To build the application:
+```bash
+npm run build
+```
+
+## Deployment
+The application is automatically deployed to Firebase Hosting via GitHub Actions.
 
 ## Project info
 
