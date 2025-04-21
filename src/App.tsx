@@ -22,6 +22,7 @@ import InstructionalAids from "./pages/InstructionalAids";
 import Library from "./pages/Library";
 import Laboratory from "./pages/Laboratory";
 import PowerSupply from "./pages/PowerSupply";
+import EnrollmentForm from "./pages/EnrollmentForm";
 
 const queryClient = new QueryClient();
 
@@ -50,6 +51,7 @@ const App = () => (
           <Route path="/library" element={<Library />} />
           <Route path="/laboratory" element={<Laboratory />} />
           <Route path="/power-supply" element={<PowerSupply />} />
+          <Route path="/enroll" element={<EnrollmentForm />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

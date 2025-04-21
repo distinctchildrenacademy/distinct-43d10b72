@@ -208,13 +208,26 @@ const Header = () => {
                           </NavigationMenuLink>
                         </li>
                       ))}
+                      <li className="row-span-1">
+                          <NavigationMenuLink asChild>
+                          <Link
+                            to="/enroll"
+                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-blue-50 hover:text-blue-600"
+                            >
+                            <div className="text-sm font-medium leading-none">Enroll Now</div>
+                              <p className="line-clamp-2 text-sm leading-snug text-gray-500">
+                              Start your enrollment process today
+                              </p>
+                          </Link>
+                          </NavigationMenuLink>
+                        </li>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
                   <NavigationMenuLink
-                    href="#contact"
+                    href="/contact"
                     className="text-gray-700 hover:text-blue-600 font-medium py-2 px-3 transition-colors"
                   >
                     Contact Us
@@ -226,9 +239,11 @@ const Header = () => {
 
           {/* Enrollment Button */}
           <div className="hidden lg:block">
+            <Link to="/enroll">
             <Button className="bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white font-medium">
               Enroll Now
             </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -297,12 +312,14 @@ const Header = () => {
               )}
             </div>
 
-            <a href="#contact" className="block text-gray-700 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Contact Us</a>
+            <a href="/contact" className="block text-gray-700 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Contact Us</a>
 
             <div className="pt-2">
+              <Link to="/enroll">
               <Button className="w-full bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white font-medium">
                 Enroll Now
               </Button>
+              </Link>
             </div>
           </div>
         </div>
