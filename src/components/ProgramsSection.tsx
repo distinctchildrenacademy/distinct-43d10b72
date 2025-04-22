@@ -29,17 +29,17 @@ const ProgramsSection = () => {
   ];
 
   return (
-    <section id="programs" className="py-16 md:py-24">
+    <section id="programs" className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Development Programs</h2>
           <div className="w-20 h-1 bg-academy-purple mx-auto mb-6"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto mb-12">
             Explore our diverse educational programs, designed to meet the needs of children at different developmental stages.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {programs.map((program, index) => (
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="pb-4">
@@ -72,4 +72,3 @@ const ProgramsSection = () => {
 };
 
 export default ProgramsSection;
-

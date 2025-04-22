@@ -1,4 +1,3 @@
-
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -93,7 +92,7 @@ const ContactSection = () => {
                 />
               </div>
               
-              <Button className="w-full bg-academy-purple hover:bg-academy-purple-dark">
+              <Button className="w-full bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white">
                 Send Message
               </Button>
             </form>
@@ -124,7 +123,7 @@ const ContactSection = () => {
                 We invite you to visit our campus and see our programs in action. 
                 Schedule a personalized tour to experience the Distinct Children Academy difference.
               </p>
-              <Button className="w-full bg-academy-purple hover:bg-academy-purple-dark">
+              <Button className="w-full bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white">
                 Book a Tour
               </Button>
             </div>
