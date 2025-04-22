@@ -5,18 +5,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const ProgramsSection = () => {
   const programs = [
     {
-      title: "Our Development Programs",
-      description: "Explore our diverse educational programs, designed to meet the needs of children at different developmental stages.",
-      icon: <BookOpen className="h-6 w-6 text-academy-purple" />,
-      features: []
-    },
-    {
       title: "After-School Programs",
       description: "Enriching after-school activities that extend learning beyond the classroom.",
       icon: <PlayCircle className="h-6 w-6 text-academy-purple" />,
       features: [
         "STEM activities",
-        "Sports and games",
+        "Sports and games", 
         "Arts, Music, and Crafts",
         "Project-based learning"
       ]
@@ -41,7 +35,7 @@ const ProgramsSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Development Programs</h2>
           <div className="w-20 h-1 bg-academy-purple mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Explore our diverse educational programs designed to meet the needs of children at different developmental stages.
+            Explore our diverse educational programs, designed to meet the needs of children at different developmental stages.
           </p>
         </div>
 
@@ -78,3 +72,4 @@ const ProgramsSection = () => {
 };
 
 export default ProgramsSection;
+
