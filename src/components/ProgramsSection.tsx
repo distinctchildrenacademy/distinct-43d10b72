@@ -5,15 +5,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const ProgramsSection = () => {
   const programs = [
     {
-      title: "Our Educational Programs",
-      description: "Designed to meet the needs of children at different developmental stages, while nurturing their creativity and critical thinking.",
+      title: "Our Development Programs",
+      description: "Explore our diverse educational programs, designed to meet the needs of children at different developmental stages.",
       icon: <BookOpen className="h-6 w-6 text-academy-purple" />,
-      features: [
-        "Social and emotional development",
-        "Project-based learning",
-        "Arts and music integration",
-        "Physical education"
-      ]
+      features: []
     },
     {
       title: "After-School Programs",
@@ -21,8 +16,9 @@ const ProgramsSection = () => {
       icon: <PlayCircle className="h-6 w-6 text-academy-purple" />,
       features: [
         "STEM activities",
-        "Arts and crafts",
-        "Sports and games"
+        "Sports and games",
+        "Arts, Music, and Crafts",
+        "Project-based learning"
       ]
     },
     {
@@ -30,10 +26,10 @@ const ProgramsSection = () => {
       description: "Exciting summer programs that combine fun and education during school breaks.",
       icon: <CalendarDays className="h-6 w-6 text-academy-purple" />,
       features: [
-        "Weekly themed activities",
-        "Field trips and outdoor adventures",
-        "Special guest presentations",
-        "Creative projects"
+        "Field trips",
+        "Creative projects",
+        "Outdoor adventures",
+        "Special guest presentations"
       ]
     }
   ];
@@ -42,7 +38,7 @@ const ProgramsSection = () => {
     <section id="programs" className="py-16 md:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Educational Programs</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Development Programs</h2>
           <div className="w-20 h-1 bg-academy-purple mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Explore our diverse educational programs designed to meet the needs of children at different developmental stages.
@@ -59,18 +55,20 @@ const ProgramsSection = () => {
                 </div>
                 <CardDescription className="text-gray-600">{program.description}</CardDescription>
               </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  {program.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <div className="flex-shrink-0 mr-2 mt-1">
-                        <div className="h-1.5 w-1.5 rounded-full bg-academy-purple"></div>
-                      </div>
-                      <span className="text-gray-600">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
+              {program.features.length > 0 && (
+                <CardContent>
+                  <ul className="space-y-2">
+                    {program.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <div className="flex-shrink-0 mr-2 mt-1">
+                          <div className="h-1.5 w-1.5 rounded-full bg-academy-purple"></div>
+                        </div>
+                        <span className="text-gray-600">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              )}
             </Card>
           ))}
         </div>
