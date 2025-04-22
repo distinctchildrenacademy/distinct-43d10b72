@@ -1,25 +1,15 @@
-import { BookOpen, Clock, CalendarDays, Lightbulb } from "lucide-react";
+
+import { BookOpen, PlayCircle, CalendarDays } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const ProgramsSection = () => {
   const programs = [
     {
-      title: "Early Childhood (Ages 2-4)",
-      description: "Our early childhood program focuses on playful learning, social skills, and foundational development.",
-      icon: <Lightbulb className="h-6 w-6 text-academy-purple" />,
-      features: [
-        "Play-based learning approach",
-        "Introduction to numbers and letters",
-        "Social and emotional development",
-        "Fine and gross motor skills"
-      ]
-    },
-    {
-      title: "Primary School (Ages 5-10)",
-      description: "A comprehensive curriculum that builds strong academic foundations while nurturing creativity and critical thinking.",
+      title: "Our Educational Programs",
+      description: "Designed to meet the needs of children at different developmental stages, while nurturing their creativity and critical thinking.",
       icon: <BookOpen className="h-6 w-6 text-academy-purple" />,
       features: [
-        "Core academics (Math, Science, Language)",
+        "Social and emotional development",
         "Project-based learning",
         "Arts and music integration",
         "Physical education"
@@ -28,9 +18,8 @@ const ProgramsSection = () => {
     {
       title: "After-School Programs",
       description: "Enriching after-school activities that extend learning beyond the classroom.",
-      icon: <Clock className="h-6 w-6 text-academy-purple" />,
+      icon: <PlayCircle className="h-6 w-6 text-academy-purple" />,
       features: [
-        "Homework assistance",
         "STEM activities",
         "Arts and crafts",
         "Sports and games"
@@ -60,7 +49,7 @@ const ProgramsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {programs.map((program, index) => (
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader className="pb-4">
