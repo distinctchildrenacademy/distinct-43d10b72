@@ -15,16 +15,27 @@ const GallerySection = () => {
     "/lovable-uploads/e6bc19e5-e6ac-4ce8-9d83-2cf2d4600e04.png",
     "/lovable-uploads/e5a0609c-a259-485d-a32b-32bee9164322.png",
     "/lovable-uploads/25a5e501-3458-4c53-b3a9-658dd9a99f66.png",
-    "/lovable-uploads/86d52445-afc0-4aa6-b641-c7a6ccfd4931.png"
+    "/lovable-uploads/86d52445-afc0-4aa6-b641-c7a6ccfd4931.png",
+    "/lovable-uploads/a8ff29ba-4fe2-456d-a94b-7a04a49d24f0.png",
+    "/lovable-uploads/fd7a0e81-32bc-471f-89d6-7f011e56a1b6.png",
+    "/lovable-uploads/aab03ccf-0448-4336-91b8-bd2dbe10e023.png",
+    "/lovable-uploads/96c824da-17f2-4a61-a27c-fa088379ac81.png"
   ];
 
   return (
-    <section id="gallery" className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Gallery</h2>
+    <section id="gallery" className="py-16 md:py-24 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Gallery</h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto mb-6"></div>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Take a glimpse into life at Distinct Children Academy through our photo gallery.
+          </p>
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {images.map((src, index) => (
-            <div key={index} className="relative aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+            <div key={index} className="relative aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
               <img
                 src={src}
                 alt={`Gallery image ${index + 1}`}
